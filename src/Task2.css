@@ -1,0 +1,43 @@
+p{
+    background-color: blue;
+    display: flex;
+    color: aqua;
+    align-items: center;
+    margin-top: 200px;
+    font-size: 100px;
+    justify-content: space-evenly;
+  }
+  
+lable{
+    display: block;
+}
+  
+
+  
+  .btn{
+    color: aliceblue;
+    background: #43cea2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  }
+  body{
+    background: #43cea2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #185a9d, #43cea2);
+}
+.container{
+    background-color: aliceblue;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    min-width: 600px;
+    max-width: 90%;
+    display: grid;
+    grid: auto /1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    padding: 3rem;
+    font-size: 1.125rem;
+    
+}
