@@ -4,6 +4,7 @@
   }
 .AppBar{
   display: flex;
+  margin-bottom: 20%;
 }
 ul{
   display: flex;

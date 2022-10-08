@@ -4,27 +4,63 @@
     "name":"devendra",
     "mobile":"9005297632",
     "gender":"Male",
-    "email":"adevi237@gmail.com"
+    "email":"adevi237@gmail.com",
+    "address":
+        {
+        "city":"agra",
+        "pin_code": 282001,
+        "House No.": "E-84",
+        "State": "Uttar Pradesh",
+        "Country":"India"
+        }
+    
 },
 {
     "id":"2",
     "name":"Sundar",
     "mobile":"9005297632",
     "gender":"Male",
-    "email":"adevn237@gmail.com"
+    "email":"adevn237@gmail.com",
+    "address":
+        {
+        "city":"agra",
+        "pin_code": 282001,
+        "House No.": "E-84",
+        "State": "Uttar Pradesh",
+        "Country":"India"
+        }
+    
 },
 {
     "id":"3",
     "name":"Angel",
     "mobile":"9005297632",
     "gender":"Female",
-    "email":"adein237@gmail.com"
+    "email":"adein237@gmail.com",
+    "address":
+        {
+        "city":"agra",
+        "pin_code": 282001,
+        "House No.": "E-84",
+        "State": "Uttar Pradesh",
+        "Country":"India"
+        }
+    
 },
 {
     "id":"4",
     "name":"Priya",
     "mobile":"9005297632",
     "gender":"Female",
-    "email":"advin237@gmail.com"
+    "email":"advin237@gmail.com",
+    "address":{
+        "city":"agra",
+        "pin_code": 282001,
+        "House No.": "E-84",
+        "State": "Uttar Pradesh",
+        "Country":"India"
+        }
+    
 }
+
 ]

@@ -13,7 +13,7 @@ export function App() {
   return (
     <div>
       <Nav />
-      <div>
+      <div style={{margin: "15%"}}>
         <Outlet />
       </div>
 
@@ -24,7 +24,7 @@ export function App() {
 
 export function Nav() {
   return (
-    <AppBar className="AppBar">
+    <AppBar component={"nav"}>
       <Link to="/" element={<App />}></Link>
       <ul>
         <li><Link to="./Task1" element={<Task1 />} style={{ color: "aliceblue", fontSize: "24px" }}>Task1</Link></li>

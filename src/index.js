@@ -16,13 +16,13 @@ root.render(
     <BrowserRouter>
     <StyledEngineProvider>
       <Routes>
-        {/* <Route path="/" element={<App />}>  */}
+        <Route path="/" element={<App />}> 
           <Route path="/Task1" element={<Task1 />} />
           <Route path="/Task2" element={<Task2 />} />
           <Route path="/Task3" element={<Task3 />} />
           <Route path="/Task4" element={<Task4 />} />
           <Route path="/Task5" element={<Task5 />} />
-         {/* </Route>  */}
+         </Route> 
       </Routes>
       </StyledEngineProvider>
     </BrowserRouter>
