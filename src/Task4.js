@@ -22,7 +22,7 @@ export default function Task4() {
                 <TableCell align="right">{item.email}</TableCell>
                 <TableCell align="right">{item.gender}</TableCell>
                 <TableCell align="right">{item.mobile}</TableCell>
-              </TableRow> 
+              </TableRow> ,
             ))}        
           </TableBody>
         </TableContainer>
