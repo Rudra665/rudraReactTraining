@@ -25,28 +25,8 @@ export default function Task1() {
                 <TableCell align="right">{item.email}</TableCell>
                 <TableCell align="right">{item.gender}</TableCell>
                 <TableCell align="right">{item.mobile}</TableCell>
-              </TableRow>,
-              <TableRow>
-                <TableCell>{item.id}</TableCell>
-                <TableCell>{item.name}</TableCell>
-                <TableCell align="right">{item.email}</TableCell>
-                <TableCell align="right">{item.gender}</TableCell>
-                <TableCell align="right">{item.mobile}</TableCell>
-              </TableRow>,
-              <TableRow>
-                <TableCell>{item.id}</TableCell>
-                <TableCell>{item.name}</TableCell>
-                <TableCell align="right">{item.email}</TableCell>
-                <TableCell align="right">{item.gender}</TableCell>
-                <TableCell align="right">{item.mobile}</TableCell>
-              </TableRow>,
-              <TableRow>
-                <TableCell>{item.id}</TableCell>
-                <TableCell>{item.name}</TableCell>
-                <TableCell align="right">{item.email}</TableCell>
-                <TableCell align="right">{item.gender}</TableCell>
-                <TableCell align="right">{item.mobile}</TableCell>
               </TableRow>
+              
             ))}
           </TableBody>
         </TableContainer></div>
