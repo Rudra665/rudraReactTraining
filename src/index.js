@@ -14,8 +14,8 @@ root.render(
   <React.StrictMode>
   
     <BrowserRouter>
-    <StyledEngineProvider>
-      <Routes>
+    
+      {/* <Routes>
         <Route path="/" element={<App />}> 
           <Route path="/Task1" element={<Task1 />} />
           <Route path="/Task2" element={<Task2 />} />
@@ -23,8 +23,9 @@ root.render(
           <Route path="/Task4" element={<Task4 />} />
           <Route path="/Task5" element={<Task5 />} />
          </Route> 
-      </Routes>
-      </StyledEngineProvider>
+      </Routes> */}
+      
+      
     </BrowserRouter>
     
   </React.StrictMode>

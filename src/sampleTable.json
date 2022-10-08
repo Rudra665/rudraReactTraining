@@ -9,9 +9,9 @@
         {
         "city":"agra",
         "pin_code": 282001,
-        "House No.": "E-84",
+        "house_no.": "E-84",
         "State": "Uttar Pradesh",
-        "Country":"India"
+        "country":"India"
         }
     
 },
@@ -25,9 +25,9 @@
         {
         "city":"agra",
         "pin_code": 282001,
-        "House No.": "E-84",
+        "house_no.": "E-84",
         "State": "Uttar Pradesh",
-        "Country":"India"
+        "country":"India"
         }
     
 },
@@ -41,9 +41,9 @@
         {
         "city":"agra",
         "pin_code": 282001,
-        "House No.": "E-84",
+        "house_no.": "E-84",
         "State": "Uttar Pradesh",
-        "Country":"India"
+        "country":"India"
         }
     
 },
@@ -56,9 +56,9 @@
     "address":{
         "city":"agra",
         "pin_code": 282001,
-        "House No.": "E-84",
+        "house_no.": "E-84",
         "State": "Uttar Pradesh",
-        "Country":"India"
+        "country":"India"
         }
     
 }
