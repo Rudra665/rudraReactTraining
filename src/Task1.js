@@ -4,12 +4,12 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-
+import './Task1.css';
 export default function Task1() {
 
     return (
-      <><p> This is Task1</p>
-        <div><TableContainer>
+      <>
+        <div className='table'><TableContainer>
           <TableHead><TableRow>
             <TableCell>User Id</TableCell>
             <TableCell>User Name</TableCell>

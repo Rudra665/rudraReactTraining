@@ -1,19 +1,38 @@
+
 .App {
     font-family: sans-serif;
-    text-align: center;
   }
 .AppBar{
   display: flex;
-  margin-bottom: 20%;
 }
 ul{
   display: flex;
-  justify-content: space-between;
+  font-size: medium;
+  overflow-x:scroll;
+  justify-content:center;
+ align-items: center;
+ -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-right: 3%;
+}
+@media only screen and (max-width:700px){
+  ul{
+    display: flex;
+    justify-content: left;
+    margin-right: 3%;
+  }
+  
+}
+ul::-webkit-scrollbar{
+  display: none;
 }
 li{
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   list-style: none;
-  padding: 12px 0px;
-  margin: 0px 24px;
+  padding: 2px 4rem;
+}
+@media only screen and (max-width:700px){
+  li{
+  padding-inline: 2.9rem;
+  } 
 }

@@ -12,8 +12,8 @@ import Task5 from './Task5';
 export function App() {
   return (
     <div>
-      <Nav />
-      <div style={{margin: "15%"}}>
+      <Nav  />
+      <div >
         <Outlet />
       </div>
 
@@ -24,7 +24,7 @@ export function App() {
 
 export function Nav() {
   return (
-    <AppBar component={"nav"}>
+    <AppBar component={"nav"} >
       <Link to="/" element={<App />}></Link>
       <ul>
         <li><Link to="./Task1" element={<Task1 />} style={{ color: "aliceblue", fontSize: "24px" }}>Task1</Link></li>
@@ -36,11 +36,4 @@ export function Nav() {
     </AppBar >
   )
 }
-
-
-
-
-
-
-
 export default App;

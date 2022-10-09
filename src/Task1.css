@@ -1,0 +1,10 @@
+.table{
+padding:25% 30%;
+overflow-x: hidden;
+
+}
+@media only screen and (max-width:700px) {
+.table{
+    padding: 40% 10%;
+}
+}
