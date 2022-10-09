@@ -1,85 +1,61 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import DialogTitle from '@mui/material/DialogTitle';
-import Dialog from '@mui/material/Dialog';
-import Typography from '@mui/material/Typography';
 import SampleTable from "sampleTable.json"
 import { TableHead, TableBody, TableCell,TableRow } from '@mui/material';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
 
-
-function SimpleDialog(props) {
-  const { onClose, selectedValue, open } = props;
-
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
-  return (
-    <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>Address dialog</DialogTitle>
-
-      <TableBody>
-      <TableHead>
-      <TableCell >City</TableCell>
-                <TableCell >PinCode</TableCell>
-                <TableCell ></TableCell>
-                <TableCell ></TableCell>
-                <TableCell ></TableCell>
-              
-      </TableHead>
-      <TableRow>
-      {SampleTable.map((item.address, id)=>(
-                <TableCell >{item.address.pin_code}</TableCell>
-                <TableCell >{item.address.city}</TableCell>
-                <TableCell align="right">{item.address.country}</TableCell>
-                <TableCell align="right">{item.address.house no.}</TableCell>
-                <TableCell align="right">{item.mobile}</TableCell>
-            ))}
-            </TableRow> 
-</TableBody>
-            
-    </Dialog>
-  );
-}
-
-SimpleDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-  selectedValue: PropTypes.string.isRequired,
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
 };
 
-export default function SimpleDialogDemo() {
+export default function myDialog() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState([1]);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (value) => {
-    setOpen(false);
-    setSelectedValue(value);
-  };
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Typography variant="subtitle1" component="div">
-        Selected: {selectedValue}
-      </Typography>
-      <br />
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open simple dialog
-      </Button>
-      <SimpleDialog
-        selectedValue={selectedValue}
+      <Modal
         open={open}
         onClose={handleClose}
-      />
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          
+     <TableContainer align="center">
+           <TableHead>
+           <TableRow>
+             <TableCell>House No.</TableCell>
+             <TableCell>State</TableCell>
+             <TableCell>City</TableCell>
+             <TableCell>Pincode</TableCell>
+             <TableCell>Country</TableCell>
+           </TableRow>
+           </TableHead>
+           <TableBody>
+             {SampleTable.map((item, id) => (
+            <TableRow>
+                 <TableCell >{item.address.house_no.}</TableCell>
+                 <TableCell >{item.address.state}</TableCell>
+                 <TableCell align="right">{item.address.city}</TableCell>
+                 <TableCell align="right">{item.address.pin_code}</TableCell>
+                <TableCell align="right">{item.address.country}</TableCell>
+               </TableRow> 
+             ))}        
+           </TableBody>
+         </TableContainer> 
+        </Box>
+      </Modal>
     </div>
   );
 }
+
