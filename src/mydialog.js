@@ -1,10 +1,8 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import SampleTable from "sampleTable.json"
-import { TableHead, TableBody, TableCell,TableRow } from '@mui/material';
+import SampleTable from "./sampleTable.json"
+import { TableContainer, TableHead, TableBody, TableCell,TableRow } from '@mui/material';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-
 const style = {
   position: 'absolute',
   top: '50%',
@@ -17,18 +15,13 @@ const style = {
   p: 4,
 };
 
-export default function myDialog() {
+export default function MyModal() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+  const handleOpen = () => setOpen(true) ;  
   return (
     <div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-describedby="modal-modal-description"
-      >
+    <Button>
+      <Modal>
         <Box sx={style}>
           
      <TableContainer align="center">
@@ -37,14 +30,14 @@ export default function myDialog() {
              <TableCell>House No.</TableCell>
              <TableCell>State</TableCell>
              <TableCell>City</TableCell>
-             <TableCell>Pincode</TableCell>
+             <TableCell>Pin code</TableCell>
              <TableCell>Country</TableCell>
            </TableRow>
            </TableHead>
            <TableBody>
              {SampleTable.map((item, id) => (
             <TableRow>
-                 <TableCell >{item.address.house_no.}</TableCell>
+                 <TableCell >{item.address.house_no}</TableCell>
                  <TableCell >{item.address.state}</TableCell>
                  <TableCell align="right">{item.address.city}</TableCell>
                  <TableCell align="right">{item.address.pin_code}</TableCell>

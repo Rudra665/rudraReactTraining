@@ -1,12 +1,19 @@
 import { TableBody, TableHead, TableRow, TableCell, TableContainer } from "@mui/material"
 import SampleTable from './sampleTable.json';
 import './Task4.css';
+import * as React from 'react'
 import Button from '@mui/material/Button';
-import myDialog from './myDialog.js'
+import MyModal from "./mydialog";
+
+
+
+
 export default function Task4() {
-    return (
+  
+  return (
   
       <>
+      <div className="table">
      <TableContainer align="center">
            <TableHead><TableRow>
              <TableCell>User Id</TableCell>
@@ -24,12 +31,14 @@ export default function Task4() {
                  <TableCell align="right">{item.email}</TableCell>
                  <TableCell align="right">{item.gender}</TableCell>
                 <TableCell align="right">{item.mobile}</TableCell>
-                <Button onclick={{myDialog}}><TableCell align="right">{item.address}</TableCell></Button>
-                
+                <Button onclick={handleOpen}><TableCell>{item.address}</TableCell></Button> 
+                <MyModal></MyModal>
                </TableRow> 
              ))}        
            </TableBody>
-         </TableContainer> 
+         </TableContainer>
+         </div> 
       </>
   
-    )
+    )}
+             
