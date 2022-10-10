@@ -1,38 +1,39 @@
-
 .App {
-    font-family: sans-serif;
-  }
-.AppBar{
-  display: flex;
+  font-family: sans-serif;
 }
-ul{
+
+ul {
   display: flex;
   font-size: medium;
-  overflow-x:scroll;
-  justify-content:center;
- align-items: center;
- -ms-overflow-style: none;
-  scrollbar-width: none;
-  margin-right: 3%;
+  overflow-x: scroll;
+  justify-content: center;
+  align-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: 20px;
 }
-@media only screen and (max-width:700px){
-  ul{
+
+@media only screen and (max-width:700px) {
+  ul {
     display: flex;
     justify-content: left;
     margin-right: 3%;
+
   }
-  
+
 }
-ul::-webkit-scrollbar{
+
+ul::-webkit-scrollbar {
   display: none;
 }
-li{
+
+li {
   justify-content: space-between;
   list-style: none;
   padding: 2px 4rem;
 }
-@media only screen and (max-width:700px){
-  li{
-  padding-inline: 2.9rem;
-  } 
+
+@media only screen and (max-width:700px) {
+  li {
+    padding-inline: 2rem;
+  }
 }

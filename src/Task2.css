@@ -1,16 +1,45 @@
-    .btn{
-    color: aliceblue;
-    background: #43cea2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
-  }
-  body{
-    background: #43cea2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #185a9d, #43cea2);
-}
-.div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .btn {
+      color: aliceblue;
+      background: #43cea2;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #185a9d, #43cea2);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    body {
+      background: #43cea2;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #185a9d, #43cea2);
+
+    }
+/*  */
+
+    .form {
+      width: fit-content;
+     margin: auto;
+      flex-direction: column;
+      background: aliceblue;
+      padding: 20px;
+    }
+
+
+    .form .form__custom-button {
+
+      width: 20%;
+      color: aliceblue;
+      background: #283c86;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #283c86, #45a247);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #283c86, #45a247);
+    }
+
+    @media only screen and (max-width:700px) {
+      .form .form__custom-button {
+        width: 85%;
+      }
+    }

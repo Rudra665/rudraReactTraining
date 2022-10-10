@@ -1,42 +1,34 @@
-import * as React from "react";
-import { TextField, Grid, Typography} from "@mui/material";
-
-import Box from "@mui/material/Box";
-// import "./Task2.css";
-
-
-
+import React, { Component } from "react";
+import "./Task2.css";
+import { TextField, Typography } from "@mui/material";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { maxWidth } from "@mui/system";
 export default function Task2() {
+  const matches = useMediaQuery("minWidth:700px");
   return (
-  
-    
-    // <Grid component="form" container bgcolor={"aliceblue"} justifyContent="center" sm="auto" sx={{p:5, m: 6, mt:12 }}>
-    // <Typography variant="h1" align="center">Login Form</Typography>
-    // <Grid item sm={12} md={12} lg={6}>
-    // <Box
-     
-    // >
-    //   <TextField fullWidth label="Outlined secondary" color="secondary" focused />
-      
-    // </Box>
-    // </Grid>
-    // </Grid>
-    <Box
-    component="form"
-    sx={{
-      '& > :not(style)': { m: 1, width: '25ch' },
-    }}
-    noValidate
-    autoComplete="off"
-  >
-    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-    <TextField id="filled-basic" label="Filled" variant="filled" />
-    <TextField id="standard-basic" label="Standard" variant="standard" />
-  </Box>
-    
-    
-    
-    
-     
+    <form className="form" align="center" style={{ marginTop: "20%" }}>
+      <Typography variant="h4" sx={{ fontWeight: 600 }}>
+        Login Form
+      </Typography>
+      <Grid container spacing={2} sx={{ mt: 6 }}>
+        <Grid item md={6} xs={12}>
+          <Typography align="left">UserName/Email</Typography>
+          <TextField variant="outlined" fullWidth />
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <Typography align="left">Password</Typography>
+          <TextField variant="outlined" fullWidth />
+          <Typography align="left" color={"secondary"}>
+            Forgotten Password?
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Button className="form__custom-button">Log in</Button>
+          <Typography>Not a user? Sign Up</Typography>
+        </Grid>
+      </Grid>
+    </form>
   );
 }

@@ -3,29 +3,15 @@ import SampleTable from "./sampleTable.json"
 import { TableContainer, TableHead, TableBody, TableCell,TableRow } from '@mui/material';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
 
-export default function MyModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true) ;  
-  return (
-    <div>
-    <Button>
-      <Modal>
-        <Box sx={style}>
-          
+export default function ShowAddress() {
+  // const [open, setOpen] = React.useState(false);
+  // const handleOpen = () => setOpen(true) ;  
+  return (      
+     
+           <>
      <TableContainer align="center">
-           <TableHead>
+           <TableBody>
            <TableRow>
              <TableCell>House No.</TableCell>
              <TableCell>State</TableCell>
@@ -33,8 +19,6 @@ export default function MyModal() {
              <TableCell>Pin code</TableCell>
              <TableCell>Country</TableCell>
            </TableRow>
-           </TableHead>
-           <TableBody>
              {SampleTable.map((item, id) => (
             <TableRow>
                  <TableCell >{item.address.house_no}</TableCell>
@@ -46,9 +30,7 @@ export default function MyModal() {
              ))}        
            </TableBody>
          </TableContainer> 
-        </Box>
-      </Modal>
-    </div>
+    </>
   );
 }
 
