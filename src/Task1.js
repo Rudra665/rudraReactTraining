@@ -8,12 +8,6 @@ import TableRow from "@mui/material/TableRow";
 export default function Task1() {
   return (
     <>
-      {/* <div
-        align="center"
-        style={{
-          marginTop: "100px",
-        }}
-      > */}
       <TableContainer align="center" sx={{ mt: 24 }}>
         <TableHead style={{ backgroundColor: "aliceblue" }}>
           <TableRow>

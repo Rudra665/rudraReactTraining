@@ -12,9 +12,6 @@ import SampleTable from "./sampleTable.json";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import ShowAddress from "./ShowAddress";
-// import { experimentalStyled as styled } from "@mui/material/styles";
-// import { DialogProps } from "@mui/material/Dialog";
-
 function SimpleDialog(props) {
   const { open, onClose } = props;
   const handleClose = () => {
@@ -22,13 +19,10 @@ function SimpleDialog(props) {
   };
 
   return (
-    // <BlurryDialog fullWidth onClose={() => {}} open={true} maxWidth="xs">
-    <>
-      <Dialog fullWidth onClose={handleClose} open={open}>
-        <DialogTitle>Address</DialogTitle>
-        <ShowAddress />
-      </Dialog>
-    </>
+    <Dialog onClose={handleClose} open={open}>
+      <DialogTitle>Address</DialogTitle>
+      <ShowAddress data={props.userAddress} />
+    </Dialog>
   );
 }
 
@@ -39,9 +33,11 @@ SimpleDialog.propTypes = {
 
 export default function Task4() {
   const [open, setOpen] = React.useState(false);
+  const [userAddress, setUserAddress] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (add) => {
     setOpen(true);
+    setUserAddress(add);
   };
 
   const handleClose = () => {
@@ -70,13 +66,19 @@ export default function Task4() {
               <TableCell align="right">{item.gender}</TableCell>
               <TableCell align="right">{item.mobile}</TableCell>
               <TableCell>
-                <Button onClick={handleClickOpen}>Address</Button>
-                <SimpleDialog onClose={handleClose} open={open} />
+                <Button onClick={() => handleClickOpen(item.address)}>
+                  Address
+                </Button>
               </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </TableContainer>
+      <SimpleDialog
+        userAddress={userAddress}
+        onClose={handleClose}
+        open={open}
+      />
     </>
   );
 }
