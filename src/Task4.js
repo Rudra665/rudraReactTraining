@@ -5,8 +5,7 @@ import {
   TableCell,
   TableContainer,
   Divider,
-  Typography,
-  Select,
+  Typography
 } from "@mui/material";
 import SampleTable from "./sampleTable.json";
 import * as React from "react";
@@ -23,8 +22,7 @@ SimpleDialog.propTypes = {
 export default function Task4() {
   const [open, setOpen] = React.useState(false);
   const [userAddress, setUserAddress] = React.useState(null);
-  const [select, setSelect] = React.useState("");
-  const [unselect, setUnselect] = React.useState(true);
+  const [select, setSelect] = React.useState(null);
   const handleClickOpen = (value) => {
     setOpen(true);
     setUserAddress(value);
@@ -37,11 +35,11 @@ export default function Task4() {
   const handleSelected = (data) => {
     setSelect(data);
     handleClose();
-    setUnselect(false);
   };
-  const handleUnSelect = () => {
-    setUnselect(true);
+  const handleUnselect = () => {
+    setSelect(null);
   };
+
   return (
     <>
       <TableContainer align="center" sx={{ mt: 24 }}>
@@ -79,14 +77,16 @@ export default function Task4() {
         open={open}
       />
       <Divider />
-      {/* <Typography align="center">Address:{} </Typography> */}
-      {console.log("Select", select)}
-      {select && (
+      {select !== null ? (
         <>
-          <Typography align="center">Address: {select.city}</Typography>
-          <Button onSelect={handleUnSelect}></Button>
+          <div align="center">
+            <Typography align="center">Address: {select.city}</Typography>
+            <Button variant="contained" onClick={handleUnselect}>
+              Close
+            </Button>
+          </div>
         </>
-      )}
+      ) : null}
     </>
   );
 }
