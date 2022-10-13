@@ -5,7 +5,7 @@ import {
   TableCell,
   TableContainer,
   Divider,
-  Typography
+  Typography,
 } from "@mui/material";
 import SampleTable from "./sampleTable.json";
 import * as React from "react";
@@ -80,7 +80,11 @@ export default function Task4() {
       {select !== null ? (
         <>
           <div align="center">
-            <Typography align="center">Address: {select.city}</Typography>
+            <h1>Address</h1>
+            <h2>
+              {select.house_no} | {select.city} | {select.State} |
+              {select.pin_code} | {select.country}
+            </h2>
             <Button variant="contained" onClick={handleUnselect}>
               Close
             </Button>

@@ -39,7 +39,7 @@
     "email":"adein237@gmail.com",
     "address":
         {
-        "city":"delhi",
+        "city":"Delhi",
         "pin_code": 282001,
         "house_no": "E-84",
         "State": "Uttar Pradesh",
@@ -54,7 +54,7 @@
     "gender":"Female",
     "email":"advin237@gmail.com",
     "address":{
-        "city":"kanpur",
+        "city":"Noida",
         "pin_code": 282001,
         "house_no": "E-84",
         "State": "Uttar Pradesh",
