@@ -6,16 +6,6 @@ import ShowAddress from "./ShowAddress";
 import { Button } from "@mui/material";
 const SimpleDialog = (props) => {
   const { onClose, address, open, handleSelected } = props;
-  // const { select, setSelect } = React.useState("");
-
-  // const handleClose = () => {
-  //   onClose();
-  // };
-  // const handleSelected = () => {
-  //   setSelect(props.address);
-  //   handleClose();
-  // };
-
   return (
     <Dialog onClose={onClose} open={open} address={address}>
       <DialogTitle>Address</DialogTitle>
