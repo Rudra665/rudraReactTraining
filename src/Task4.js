@@ -4,46 +4,44 @@ import {
   TableRow,
   TableCell,
   TableContainer,
+  Divider,
+  Typography,
+  Select,
 } from "@mui/material";
-import PropTypes from "prop-types";
-import DialogTitle from "@mui/material/DialogTitle";
-import Dialog from "@mui/material/Dialog";
 import SampleTable from "./sampleTable.json";
 import * as React from "react";
 import Button from "@mui/material/Button";
-import ShowAddress from "./ShowAddress";
-function SimpleDialog(props) {
-  const { open, onClose } = props;
-  const handleClose = () => {
-    onClose();
-  };
-
-  return (
-    <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>Address</DialogTitle>
-      <ShowAddress data={props.userAddress} />
-    </Dialog>
-  );
-}
+import PropTypes from "prop-types";
+import SimpleDialog from "./MyDialog";
 
 SimpleDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
-  onClose: PropTypes.bool.isRequired,
+  selectedValue: PropTypes.string.isRequired,
 };
 
 export default function Task4() {
   const [open, setOpen] = React.useState(false);
-  const [userAddress, setUserAddress] = React.useState(false);
-
-  const handleClickOpen = (add) => {
+  const [userAddress, setUserAddress] = React.useState(null);
+  const [select, setSelect] = React.useState("");
+  const [unselect, setUnselect] = React.useState(true);
+  const handleClickOpen = (value) => {
     setOpen(true);
-    setUserAddress(add);
+    setUserAddress(value);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
+  const handleSelected = (data) => {
+    setSelect(data);
+    handleClose();
+    setUnselect(false);
+  };
+  const handleUnSelect = () => {
+    setUnselect(true);
+  };
   return (
     <>
       <TableContainer align="center" sx={{ mt: 24 }}>
@@ -75,10 +73,20 @@ export default function Task4() {
         </TableBody>
       </TableContainer>
       <SimpleDialog
-        userAddress={userAddress}
-        onClose={handleClose}
+        address={userAddress}
+        handleSelected={(data) => handleSelected(data)}
+        onClose={() => handleClose()}
         open={open}
       />
+      <Divider />
+      {/* <Typography align="center">Address:{} </Typography> */}
+      {console.log("Select", select)}
+      {select && (
+        <>
+          <Typography align="center">Address: {select.city}</Typography>
+          <Button onSelect={handleUnSelect}></Button>
+        </>
+      )}
     </>
   );
 }

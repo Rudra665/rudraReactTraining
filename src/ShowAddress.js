@@ -13,7 +13,6 @@ export default function ShowAddress(props) {
             <TableCell>Pin code</TableCell>
             <TableCell>Country</TableCell>
           </TableRow>
-
           <TableRow>
             <TableCell>{props.data.house_no}</TableCell>
             <TableCell>{props.data.state}</TableCell>
@@ -23,6 +22,14 @@ export default function ShowAddress(props) {
           </TableRow>
         </TableBody>
       </TableContainer>
+      {/* <Box py={2}>
+        <Button
+          sx={{ mx: 20, p: 2, backgroundColor: "cyan" }}
+          onClick={() => props.handleShowSelectedAddress(props.data)}
+        >
+          Select
+        </Button>
+      </Box> */}
     </>
   );
 }
