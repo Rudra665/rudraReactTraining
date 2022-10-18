@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
-import Task1 from "./Task1";
-import Task2 from "./Task2";
-import Task3 from "./Task3";
-import Task4 from "./Task4";
-import Task5 from "./Task5";
+import Task1 from "./Components/Task1/Task1";
+import Task2 from "./Components/Task2/Task2";
+import Task3 from "./Components/Task3/Task3";
+import Task4 from "./Components/Task4/Task4";
+import Task5 from "./Components/Task5/Task5";
 // import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DashBhoard from "./DashBhoard";
+import DashBoard from "./Components/DashBoard/DashBoard";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -22,7 +22,7 @@ root.render(
           <Route path="/Task4" element={<Task4 />} />
           <Route path="/Task5" element={<Task5 />} />
         </Route>
-        <Route path="/DashBhoard" element={<DashBhoard />} />
+        <Route path="/DashBoard" element={<DashBoard />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

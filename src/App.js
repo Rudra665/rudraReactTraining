@@ -1,11 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
 import "./app.css";
 import AppBar from "@mui/material/AppBar";
-import Task1 from "./Task1";
-import Task2 from "./Task2";
-import Task3 from "./Task3";
-import Task4 from "./Task4";
-import Task5 from "./Task5";
+import Task1 from "./Components/Task1/Task1";
+import Task2 from "./Components/Task2/Task2";
+import Task3 from "./Components/Task3/Task3";
+import Task4 from "./Components/Task4/Task4";
+import Task5 from "./Components/Task5/Task5";
 
 export function App() {
   return (
@@ -25,7 +25,7 @@ export function Nav() {
       <ul>
         <li>
           <Link
-            to="./Task1"
+            to="/Task1"
             element={<Task1 />}
             style={{ color: "aliceblue", fontSize: "24px" }}
           >

@@ -5,7 +5,7 @@ import { TextField, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { useNavigate } from "react-router-dom";
-import DashBhoard from "./DashBhoard";
+import DashBoard from "../DashBoard/DashBoard";
 
 export default function Task2() {
   var navi = useNavigate();
@@ -21,7 +21,7 @@ export default function Task2() {
     if (mail === credentials.name && showPassword === credentials.cred) {
       alert`Logged In`;
 
-      navi("/DashBhoard");
+      navi("/DashBoard");
     } else {
       alert`invalid credentials`;
     }

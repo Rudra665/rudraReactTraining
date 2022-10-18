@@ -7,11 +7,11 @@ import {
   Divider,
   Typography,
 } from "@mui/material";
-import SampleTable from "./sampleTable.json";
+import SampleTable from "../sampleTable.json";
 import * as React from "react";
 import Button from "@mui/material/Button";
 import PropTypes from "prop-types";
-import SimpleDialog from "./MyDialog";
+import SimpleDialog from "../MyDialog/MyDialog";
 
 SimpleDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
