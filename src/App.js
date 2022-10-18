@@ -71,6 +71,7 @@ export function Nav() {
         </li>
       </ul>
     </AppBar>
+    <h1>Welcome To Home Screeen</h1>
   );
 }
 export default App;
