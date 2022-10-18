@@ -20,58 +20,60 @@ export function App() {
 
 export function Nav() {
   return (
-    <AppBar component={"nav"} sx={{ mb: 12 }}>
-      <Link to="/" element={<App />}></Link>
-      <ul>
-        <li>
-          <Link
-            to="/Task1"
-            element={<Task1 />}
-            style={{ color: "aliceblue", fontSize: "24px" }}
-          >
-            Task1
-          </Link>
-        </li>
-        <li>
-          {" "}
-          <Link
-            to="/Task2"
-            element={<Task2 />}
-            style={{ color: "aliceblue", fontSize: "24px" }}
-          >
-            Task2
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/Task3"
-            element={<Task3 />}
-            style={{ color: "aliceblue", fontSize: "24px" }}
-          >
-            Task3
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/Task4"
-            element={<Task4 />}
-            style={{ color: "aliceblue", fontSize: "24px" }}
-          >
-            Task4
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/Task5"
-            element={<Task5 />}
-            style={{ color: "aliceblue", fontSize: "24px" }}
-          >
-            Task5
-          </Link>
-        </li>
-      </ul>
-    </AppBar>
-    <h1>Welcome To Home Screeen</h1>
+    <>
+      <AppBar component={"nav"} sx={{ mb: 12 }}>
+        <Link to="/" element={<App />}></Link>
+        <ul>
+          <li>
+            <Link
+              to="/Task1"
+              element={<Task1 />}
+              style={{ color: "aliceblue", fontSize: "24px" }}
+            >
+              Task1
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link
+              to="/Task2"
+              element={<Task2 />}
+              style={{ color: "aliceblue", fontSize: "24px" }}
+            >
+              Task2
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Task3"
+              element={<Task3 />}
+              style={{ color: "aliceblue", fontSize: "24px" }}
+            >
+              Task3
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Task4"
+              element={<Task4 />}
+              style={{ color: "aliceblue", fontSize: "24px" }}
+            >
+              Task4
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Task5"
+              element={<Task5 />}
+              style={{ color: "aliceblue", fontSize: "24px" }}
+            >
+              Task5
+            </Link>
+          </li>
+        </ul>
+      </AppBar>
+      <h1>Welcome To Home Screeen</h1>
+    </>
   );
 }
 export default App;
