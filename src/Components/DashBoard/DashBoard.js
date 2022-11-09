@@ -7,13 +7,23 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-// import { fontSize, height } from "@mui/system";
+import MyDrawer from "./Drawer/MyDrawer";
+
+import "./DashBoard.css";
+import { Outlet } from "react-router-dom";
 const DashBoard = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
   return (
     <>
       <div style={{ backgroundColor: "aliceblue" }}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
+          <AppBar position="relative">
             <Toolbar>
               <IconButton
                 size="large"
@@ -21,9 +31,11 @@ const DashBoard = () => {
                 color="inherit"
                 aria-label="menu"
                 sx={{ mr: 2 }}
+                onClick={handleOpen}
               >
                 <MenuIcon />
               </IconButton>
+
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 News
               </Typography>
@@ -31,8 +43,11 @@ const DashBoard = () => {
             </Toolbar>
           </AppBar>
         </Box>
-        <div className="text" align="center" style={{}}>
-          <h1>Hello Sir!</h1>
+        <MyDrawer open={open} onClose={() => handleClose()} />
+        <div class="text" align="center">
+          <div>
+            <Outlet />
+          </div>
         </div>
       </div>
     </>

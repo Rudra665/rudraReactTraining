@@ -21,7 +21,7 @@ export default function Task2() {
     if (mail === credentials.name && showPassword === credentials.cred) {
       alert`Logged In`;
 
-      navi("/DashBoard");
+      navi("/dashboard");
     } else {
       alert`invalid credentials`;
     }
